@@ -1,3 +1,9 @@
+function trocaCor(){
+   var cor = document.getElementById("corum").value;
+document.getElementById("title-mid").style.color = cor;
+	}
+
+
 //Desafio Cálculo IMC 
 
 console.log('Calculo IMC - Variaveis: massa e altura')
