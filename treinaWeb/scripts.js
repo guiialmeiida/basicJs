@@ -9,10 +9,9 @@ console.log('#############################')
 
 //Desafio Vogal ou Consoante 
 
-console.log('Vogal ou Consoante utilizando switch, if e else')
-var letter = 'a',
+console.log('Vogal ou Consoante utilizando switch, if e else // function vorC(letra)')
+function vorC(letter){
 	isVowel = false;
-
 switch(letter){
 	case 'a': isVowel = true; break;
 	case 'e': isVowel = true; break;
@@ -20,12 +19,12 @@ switch(letter){
 	case 'o': isVowel = true; break;
 	case 'u': isVowel = true; break;
 }
-
 if(isVowel){
-	console.log('e vogal');
+	console.log('vogal');
 }else{
-	console.log('e consoante');
-}
+	console.log('consoante');
+}}
+
 console.log('#############################')
 
 //Desafio Triângulo
