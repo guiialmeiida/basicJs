@@ -36,18 +36,19 @@ function trocaCor(){
 
 //button
 clickButton = function(){
-	var rythm = new Rythm();
-	rythm.setMusic("treinaWeb/test.mp3");
-	rythm.crossOrigin = "anonymous";
-	rythm.start();
-  if (first_click) {
-        document.body.style.background = "#000000";
-		document.getElementById("singlebutton").style.color = "#000000";
-        first_click = false;
+if (first_click) {
+			var rythm = new Rythm();
+			rythm.setMusic("treinaWeb/test.mp3");
+			rythm.crossOrigin = "anonymous";
+			rythm.start();
+       		 document.body.style.background = "#000000";
+		 document.getElementById("singlebutton").style.color = "#000000";
+       		 first_click = false;
     } else {
-        document.body.style.background = "#fff";
+      		document.body.style.background = "#fff";
 		document.getElementById("singlebutton").style.color = "#fff";
 		first_click = true;
+		rythm.stop();
     }
 	localStorage.setItem('clique', first_click)
   
