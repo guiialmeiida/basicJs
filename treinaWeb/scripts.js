@@ -1,13 +1,54 @@
-var aux =localStorage.getItem('cores')
+if (localStorage.getItem('cores') == null) //#565965
+{
+	var aux = '#565965';
+}
+else{
+var aux =localStorage.getItem('cores')}
 document.getElementById("title-mid").style.color = aux;
+document.getElementById("singlebutton").style.background = aux;
+document.getElementById("singlebutton").style.border = aux;
 document.getElementById("corum").value = aux;
 
+
+if (localStorage.getItem('clique') == "false" ) {
+		document.body.style.background = "#000000";
+		document.getElementById("singlebutton").style.color = "#000000";
+		var first_click = false;
+} else {
+		document.body.style.background = "#fff";
+		document.getElementById("singlebutton").style.color = "#fff";
+		first_click = true;
+}
+
+
+//cores
 function trocaCor(){
 	var	cor = document.getElementById("corum").value;
+	
 		document.getElementById("title-mid").style.color = cor;
+		document.getElementById("singlebutton").style.background = cor;
+		document.getElementById("singlebutton").style.border = cor;
 		console.log(cor);
+		
 	localStorage.setItem('cores',cor)
 }
+
+
+//button
+clickButton = function(){
+  if (first_click) {
+        document.body.style.background = "#000000";
+		document.getElementById("singlebutton").style.color = "#000000";
+        first_click = false;
+    } else {
+        document.body.style.background = "#fff";
+		document.getElementById("singlebutton").style.color = "#fff";
+		first_click = true;
+    }
+	localStorage.setItem('clique', first_click)
+  
+}
+document.getElementsByTagName("button")[0].onclick = clickButton
 
 
 
