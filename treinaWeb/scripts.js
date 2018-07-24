@@ -1,7 +1,14 @@
+var aux =localStorage.getItem('cores')
+document.getElementById("title-mid").style.color = aux;
+document.getElementById("corum").value = aux;
+
 function trocaCor(){
-   var cor = document.getElementById("corum").value;
-document.getElementById("title-mid").style.color = cor;
-	}
+	var	cor = document.getElementById("corum").value;
+		document.getElementById("title-mid").style.color = cor;
+		console.log(cor);
+	localStorage.setItem('cores',cor)
+}
+
 
 
 //Desafio Cálculo IMC 
