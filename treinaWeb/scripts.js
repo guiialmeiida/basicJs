@@ -48,7 +48,7 @@ if (first_click) {
       		document.body.style.background = "#fff";
 		document.getElementById("singlebutton").style.color = "#fff";
 		first_click = true;
-		rythm.stop();
+		rythm.stop(freeze);
     }
 	localStorage.setItem('clique', first_click)
   
