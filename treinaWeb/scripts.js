@@ -36,6 +36,10 @@ function trocaCor(){
 
 //button
 clickButton = function(){
+	var rythm = new Rythm();
+	rythm.setMusic("treinaWeb/test.mp3");
+	rythm.crossOrigin = "anonymous";
+	rythm.start();
   if (first_click) {
         document.body.style.background = "#000000";
 		document.getElementById("singlebutton").style.color = "#000000";
