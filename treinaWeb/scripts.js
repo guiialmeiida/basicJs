@@ -68,10 +68,12 @@ clickButton1 = function(){
 			var rythm = new Rythm();
 			rythm.setMusic("treinaWeb/test.mp3");
 			rythm.crossOrigin = "anonymous";
+			rythm.loop = true;
 			rythm.start();
 			som = false;
-	}else{
-		rythm.stop();
+	}else{	rythm = new Rythm();
+		rythm.stop(freeze);
+		som = true;
 	}
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
