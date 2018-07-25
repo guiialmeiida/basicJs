@@ -71,10 +71,11 @@ clickButton1 = function(){
 			rythm.loop = true;
 			rythm.start();
 			som = false;
-	}else{	rythm = new Rythm();
-		rythm.stop(freeze);
+	}else{	
+		if (rythm.stopped === false) {
+    		rythm.stop();
 		som = true;
-	}
+   	 }}
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
