@@ -72,10 +72,8 @@ clickButton1 = function(){
 			rythm.start();
 			som = false;
 	}else{	
-		if (rythm.stopped === false) {
-    		rythm.stop();
-		som = true;
-   	 }}
+		window.location.reload(1);
+   	 }
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
