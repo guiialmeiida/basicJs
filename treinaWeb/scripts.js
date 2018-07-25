@@ -23,8 +23,6 @@ document.getElementById("corum").value = aux;
 var all = document.getElementsByClassName("btn-secondary");
 for (var i = 0; i < all.length; i++) {
   var link = all[i];
- 
- 
   link.style.backgroundColor= aux; 
   link.style.border= aux;
 }
@@ -89,9 +87,6 @@ clickButton = function(){
   
 }
 document.getElementsByTagName("button")[0].onclick = clickButton
-
-
-
 
 //Desafio Cálculo IMC 
 
