@@ -71,7 +71,7 @@ clickButton1 = function(){
 			rythm.start();
 			som = false;
 	}else{
-		rythm.stop(freeze);
+		rythm.stop();
 	}
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
