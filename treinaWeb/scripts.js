@@ -88,6 +88,22 @@ clickButton = function(){
 }
 document.getElementsByTagName("button")[0].onclick = clickButton
 
+//aqui botao musica 
+som = true;
+clickButton1 = function(){
+	if (som){
+			var rythm = new Rythm();
+			rythm.setMusic("treinaWeb/test.mp3");
+			rythm.crossOrigin = "anonymous";
+			rythm.loop = true;
+			rythm.start();
+			som = false;
+	}else{	
+		window.location.reload(1);
+   	 }
+}
+document.getElementsByTagName("button")[1].onclick = clickButton1
+
 //Desafio Cálculo IMC 
 
 console.log('Calculo IMC - Variaveis: massa e altura')
