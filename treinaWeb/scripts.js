@@ -40,7 +40,7 @@ function trocaCor(){
 }
 
 
-//button
+//button next step
 clickButton = function(){
 
   if (first_click) {
@@ -59,12 +59,20 @@ clickButton = function(){
 }
 document.getElementsByTagName("button")[0].onclick = clickButton
 
+//button start song
 
+
+som = true;
 clickButton1 = function(){
+	if (som){
 			var rythm = new Rythm();
 			rythm.setMusic("treinaWeb/test.mp3");
 			rythm.crossOrigin = "anonymous";
 			rythm.start();
+			som = false;
+	}else{
+		rythm.stop(freeze);
+	}
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
