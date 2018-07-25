@@ -1,3 +1,15 @@
+//teste function
+
+/*function pegaBotoes(){
+link = [];
+var all = document.getElementsByClassName("btn-secondary");
+for (var i = 0; i < all.length; i++) {
+link[i] = all[i];
+}
+  return(link)
+}*/
+
+//inicializar 
 if (localStorage.getItem('cores') == null) //#565965
 {
 	var aux = '#565965';
@@ -5,53 +17,72 @@ if (localStorage.getItem('cores') == null) //#565965
 else{
 var aux =localStorage.getItem('cores')}
 document.getElementById("title-mid").style.color = aux;
-document.getElementById("singlebutton").style.background = aux;
-document.getElementById("singlebutton").style.border = aux;
-document.getElementById("singlebutton2").style.background = aux;
-document.getElementById("singlebutton2").style.border = aux;
 document.getElementById("corum").value = aux;
 
+//inicializar botoes pegando o local.storage
+var all = document.getElementsByClassName("btn-secondary");
+for (var i = 0; i < all.length; i++) {
+  var link = all[i];
+ 
+ 
+  link.style.backgroundColor= aux; 
+  link.style.border= aux;
+}
 
+//inicializar letra botoes pegando o true ou false do clique
 if (localStorage.getItem('clique') == "false" ) {
-		document.body.style.background = "#000000";
-		document.getElementById("singlebutton").style.color = "#000000";
-		document.getElementById("singlebutton2").style.color = "#000000";
+		document.body.style.background = "#000";
+		var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			  var link = all[i];
+			link.style.color= "#000";}
+		//document.getElementById("singlebutton").style.color = "#000000";
 		var first_click = false;
 } else {
 		document.body.style.background = "#fff";
-		document.getElementById("singlebutton").style.color = "#fff";
-		document.getElementById("singlebutton2").style.color = "#fff";
+		var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			var link = all[i];
+			link.style.color= "#fff";}
+		//document.getElementById("singlebutton").style.color = "#fff";
 		first_click = true;
 }
 
 
-//cores
+//button de cores
 function trocaCor(){
 	var	cor = document.getElementById("corum").value;
 	
 		document.getElementById("title-mid").style.color = cor;
+		var all = document.getElementsByClassName("btn-secondary");
+		for (var i = 0; i < all.length; i++) {
+		  var link = all[i];
+		  link.style.backgroundColor= cor; 
+		  link.style.border= cor;
+		}
 		document.getElementById("singlebutton").style.background = cor;
 		document.getElementById("singlebutton").style.border = cor;
-		document.getElementById("singlebutton2").style.background = cor;
-		document.getElementById("singlebutton2").style.border = cor;
+		
 		console.log(cor);
 		
 	localStorage.setItem('cores',cor)
 }
 
-
-//button next step
+//button true or false
 clickButton = function(){
-
   if (first_click) {
         document.body.style.background = "#000000";
-		document.getElementById("singlebutton").style.color = "#000000";
-		document.getElementById("singlebutton2").style.color = "#000000";
+		var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			  var link = all[i];
+			link.style.color= "#000";}
         first_click = false;
     } else {
         document.body.style.background = "#fff";
-		document.getElementById("singlebutton").style.color = "#fff";
-		document.getElementById("singlebutton2").style.color = "#fff";
+		var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			var link = all[i];
+			link.style.color= "#fff";}
 		first_click = true;
     }
 	localStorage.setItem('clique', first_click)
@@ -59,23 +90,7 @@ clickButton = function(){
 }
 document.getElementsByTagName("button")[0].onclick = clickButton
 
-//button start song
 
-
-som = true;
-clickButton1 = function(){
-	if (som){
-			var rythm = new Rythm();
-			rythm.setMusic("treinaWeb/test.mp3");
-			rythm.crossOrigin = "anonymous";
-			rythm.loop = true;
-			rythm.start();
-			som = false;
-	}else{	
-		window.location.reload(1);
-   	 }
-}
-document.getElementsByTagName("button")[1].onclick = clickButton1
 
 
 //Desafio Cálculo IMC 
