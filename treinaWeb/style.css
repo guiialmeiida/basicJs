@@ -40,3 +40,11 @@
 	nav.testnav a {
 	text-decoration: none !important;
 	}
+	.center {
+		width: 200px;
+		display: block;
+		margin-top: 10.25rem;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
