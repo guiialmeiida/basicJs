@@ -104,6 +104,19 @@ clickButton1 = function(){
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
+//loading
+function id(el) {
+	return document.getElementById(el);
+}
+function hide(el) {
+	id(el).style.display = 'none';//escondendo tudo
+}
+window.onload = function() {
+	id('title-mid').style.display = 'block';//liberando qndo terminar
+	hide('loading');
+}
+
+
 //Desafio Cálculo IMC 
 
 console.log('Calculo IMC - Variaveis: massa e altura')
