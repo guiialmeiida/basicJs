@@ -9,6 +9,10 @@ link[i] = all[i];
   return(link)
 }*/
 
+function id(elemento) {
+	return document.getElementById(elemento);
+}
+
 //inicializar 
 if (localStorage.getItem('cores') == null) //#565965
 {
@@ -105,16 +109,15 @@ clickButton1 = function(){
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
 //loading
-function id(el) {
-	return document.getElementById(el);
+clickButton2 = function(){
+
+	id('title-mid').style.display = 'none';//retira o elemento principal
+	id('loading').style.display = 'flex';//adiciona o gif que está none
+	
 }
-function hide(el) {
-	id(el).style.display = 'none';//escondendo tudo
-}
-window.onload = function() {
-	id('title-mid').style.display = 'block';//liberando qndo terminar
-	hide('loading');
-}
+
+
+id("singlebutton5").onclick = clickButton2
 
 
 //Desafio Cálculo IMC 
