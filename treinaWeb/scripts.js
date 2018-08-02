@@ -110,23 +110,44 @@ clickButton1 = function(){
 }
 document.getElementsByTagName("button")[1].onclick = clickButton1
 
+
 //loading
-clickButton2 = function(){
-
-	id('title-mid').style.display = 'none';//retira o elemento principal
-	id('loading').style.display = 'flex';//adiciona o gif que está none
-	
+var meio = "title";
+gif = function(){
+	if(meio == "title"){
+		id('title-mid').style.display = 'none';//retira o elemento principal
+		id('loading').style.display = 'flex';//adiciona o gif que está none
+		meio = "gif";}
+	else if (meio == "imc") {
+		id('testImc').style.display = 'none';//retira o elemento principal
+		id('loading').style.display = 'flex';//adiciona o gif que está none
+		meio = "gif";
+	}
+	else {
+		location.reload();
+	}
 }
-id("singlebutton5").onclick = clickButton2
+id("singlebutton5").onclick = gif
 
-
+//imc
 imc = function(){
-	id('testImc').classList.add("animated");
-	id('testImc').classList.add("bounceInLeft");
-	id('title-mid').style.display = 'none';//retira o elemento principal
-	id('testImc').style.display = 'flex';//adiciona a div que está none
+	if(meio == "title"){
+		id('testImc').classList.add("animated");
+		id('testImc').classList.add("bounceInLeft");
+		id('title-mid').style.display = 'none';//retira o elemento principal
+		id('testImc').style.display = 'flex';//adiciona a div que está none
+	meio = "imc";}
+	else if (meio == "gif"){
+		id('testImc').classList.add("animated");
+		id('testImc').classList.add("bounceInLeft");
+		id('loading').style.display = 'none';//retira o elemento principal
+		id('testImc').style.display = 'flex';//adiciona a div que está none
+		meio = "imc";
+	}
+	else{
+		location.reload();
+	}
 }
-
 id("singlebutton6").onclick = imc
 
 //Desafio Cálculo IMC 
