@@ -60,8 +60,8 @@
 		border: 14px solid #f3f3f3;
 		border-top: 14px solid;
 		border-bottom: 14px solid;
-		border-bottom-color: white!important;
-		border-top-color: white!important;
+		border-bottom-color: transparent!important;
+		border-top-color: transparent!important;
 		border-radius: 50%;
 		width: 70px;
 		height: 70px;
