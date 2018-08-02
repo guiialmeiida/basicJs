@@ -115,10 +115,17 @@ clickButton2 = function(){
 	id('loading').style.display = 'flex';//adiciona o gif que está none
 	
 }
-
-
 id("singlebutton5").onclick = clickButton2
 
+
+imc = function(){
+	id('testImc').classList.add("animated");
+	id('testImc').classList.add("bounceInLeft");
+	id('title-mid').style.display = 'none';//retira o elemento principal
+	id('testImc').style.display = 'flex';//adiciona a div que está none
+}
+
+id("singlebutton6").onclick = imc
 
 //Desafio Cálculo IMC 
 
