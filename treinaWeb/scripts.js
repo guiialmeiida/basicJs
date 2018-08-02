@@ -30,6 +30,7 @@ for (var i = 0; i < all.length; i++) {
   link.style.backgroundColor= aux; 
   link.style.border= aux;
 }
+id("testImc").style.borderColor=aux;
 
 //inicializar letra botoes pegando o true ou false do clique
 if (localStorage.getItem('clique') == "false" ) {
@@ -64,6 +65,7 @@ function trocaCor(){
 		}
 		document.getElementById("singlebutton").style.background = cor;
 		document.getElementById("singlebutton").style.border = cor;
+		id("testImc").style.borderColor=cor;
 		
 		console.log(cor);
 		
