@@ -21,26 +21,31 @@
 		<form action="#" style="clear: both; margin-top: 4.25rem;" class="text-center">
 			<input type="color" id="corum" onchange="trocaCor();">
 		</form>
-		<div id="testImc" class="col-md-4 text-center center bordinha rounded" style="background-color: white; display: none;"> <!---->	
-			<div class="col-md-8" style="margin: auto; margin-top:2.25rem; margin-bottom:2.25rem;">
-			<label for="formGroupExampleInput">PESO</label>
-			<input type="text" class="form-control" id="formGroupExampleInput">		
-			<label for="formGroupExampleInput">ALTURA</label>
-			<input type="text" class="form-control" id="formGroupExampleInput">
-			<fieldset disabled>
-				<label for="disabledTextInput">IMC</label>
-				<input type="text" class="form-control" id="formGroupExampleInput">
-			</fieldset>
-			<button type="submit" class="btn btn-secondary" style="margin-top: .5rem;">Calcular</button>
+		
+		
+		<div id="meio">
+			<div id="testImc" class="col-md-4 text-center center bordinha rounded" style="background-color: white; display: none;"> <!---->	
+				<div class="col-md-8" style="margin: auto; margin-top:2.25rem; margin-bottom:2.25rem;">
+					<label for="formGroupExampleInput">PESO</label>
+					<input type="text" class="form-control" id="formGroupExampleInput">		
+					<label for="formGroupExampleInput">ALTURA</label>
+					<input type="text" class="form-control" id="formGroupExampleInput">
+					<fieldset disabled>
+						<label for="disabledTextInput">IMC</label>
+						<input type="text" class="form-control" id="formGroupExampleInput">
+					</fieldset>
+					<button type="submit" class="btn btn-secondary" style="margin-top: .5rem;">Calcular</button>
+				</div>
+			</div>
+			<img id="loading" src="treinaWeb/gif.gif" alt="" class="center" style="display: none;"/>
+			<div id="title-mid" class="title-mid">
+				<div class="title-m rythm-bass">
+					<h1 class="animated bounceInUp display-1 text-center rythm-bass">Basic JavaScript</h1>
+					<h5 class="display-3 text-center animated bounceInLeft" style="-webkit-animation-delay: 1.1s;">F12 - Console</h5>
+				</div>
 			</div>
 		</div>
-		<img src="treinaWeb/gif.gif" alt="" id="loading" class="center" style="display: none;"/>
-		<div id="title-mid" class="title-mid">
-			<div class="title-m rythm-bass">
-				<h1 class="animated bounceInUp display-1 text-center rythm-bass">Basic JavaScript</h1>
-				<h5 class="display-3 text-center animated bounceInLeft" style="-webkit-animation-delay: 1.1s;">F12 - Console</h5>
-			</div>
-		</div>
+		
 		<div class="text-center"> 
 			<button id="singlebutton" name="singlebutton" class="btn btn-secondary animated bounceInDown" style="-webkit-animation-delay: 1.5s; margin: 25px;">Next Step!</button> 
 		</div>
