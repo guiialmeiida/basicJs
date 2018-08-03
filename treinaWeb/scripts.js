@@ -1,22 +1,14 @@
-//teste function
-
-/*function pegaBotoes(){
-link = [];
-var all = document.getElementsByClassName("btn-secondary");
-for (var i = 0; i < all.length; i++) {
-link[i] = all[i];
-}
-  return(link)
-}*/
-
 function id(elemento) {
 	return document.getElementById(elemento);
 }
 
+if (localStorage.getItem('clique') == null || localStorage.getItem('clique') == "img"){
+		document.getElementsByTagName('body')[0].classList.add("backimg");
+}
 //inicializar 
 if (localStorage.getItem('cores') == null) //#565965
 {
-	var aux = '#565965';
+	var aux = '#ff0080';
 }
 else{
 var aux =localStorage.getItem('cores')}
@@ -34,7 +26,8 @@ id("testImc").style.borderColor=aux;
 id("oie").style.borderColor=aux;
 
 //inicializar letra botoes pegando o true ou false do clique
-if (localStorage.getItem('clique') == "false" ) {
+if (localStorage.getItem('clique') === "preto" ) {
+		document.getElementsByTagName('body')[0].classList.remove("backimg");
 		document.body.style.background = "#000";
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
@@ -42,8 +35,9 @@ if (localStorage.getItem('clique') == "false" ) {
 			link.style.color= "#000";
 			id("testImc").style.color= "#fff";}
 		//document.getElementById("singlebutton").style.color = "#000000";
-		var first_click = false;
-} else {
+		//var first_click = false;
+} else if (localStorage.getItem('clique') === "branco" ){
+		document.getElementsByTagName('body')[0].classList.remove("backimg");
 		document.body.style.background = "#fff";
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
@@ -51,7 +45,13 @@ if (localStorage.getItem('clique') == "false" ) {
 			link.style.color= "#fff";
 			id("testImc").style.color= "#000";}
 		//document.getElementById("singlebutton").style.color = "#fff";
-		first_click = true;
+		//first_click = true;
+}else{
+		var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			  var link = all[i];
+			link.style.color= "#fff";
+			id("testImc").style.color= "#000";}
 }
 
 
@@ -75,30 +75,45 @@ function trocaCor(){
 		
 	localStorage.setItem('cores',cor)
 }
+first_click = "img";
 
 //button true or false
 clickButton = function(){
-  if (first_click) {
+  if (first_click === "img" || first_click === "branco") {
+		document.getElementsByTagName('body')[0].classList.remove("backimg");
         document.body.style.background = "#000000";
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#000";
 			id("testImc").style.color= "#fff";}
-       		first_click = false;
-    } else {
+       		first_click = "preto";
+    } else{
+		document.getElementsByTagName('body')[0].classList.remove("backimg");
         document.body.style.background = "#fff";
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			var link = all[i];
 			link.style.color= "#fff";
 			id("testImc").style.color= "#000";}
-		first_click = true;
-    }
-	localStorage.setItem('clique', first_click)
-  
+		first_click = "branco";
+    }	
+  localStorage.setItem('clique', first_click)
 }
-document.getElementsByTagName("button")[0].onclick = clickButton
+
+synthWave = function(){
+	var all = document.getElementsByClassName("btn-secondary");
+			for (var i = 0; i < all.length; i++) {
+			  var link = all[i];
+			link.style.color= "#fff";
+			id("testImc").style.color= "#000";}
+			first_click = "img";
+	document.getElementsByTagName('body')[0].classList.add("backimg");
+	 localStorage.setItem('clique', first_click)
+}
+
+id("synth").onclick = synthWave;
+id("bew").onclick = clickButton
 
 //aqui botao musica 
 som = true;
@@ -114,7 +129,7 @@ clickButton1 = function(){
 		window.location.reload(1);
    	 }
 }
-document.getElementsByTagName("button")[1].onclick = clickButton1
+id("rythm").onclick = clickButton1
 
 
 //loading
@@ -137,7 +152,7 @@ gif = function(){
 		location.reload();
 	}
 }
-id("singlebutton5").onclick = gif
+id("load").onclick = gif
 
 //imc
 imc = function(){
@@ -158,7 +173,7 @@ imc = function(){
 		location.reload();
 	}
 }
-id("singlebutton6").onclick = imc
+id("imcid").onclick = imc
 
 //Desafio Cálculo IMC 
 
