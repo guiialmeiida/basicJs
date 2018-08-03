@@ -121,10 +121,14 @@ document.getElementsByTagName("button")[1].onclick = clickButton1
 var meio = "title";
 gif = function(){
 	if(meio == "title"){
+		id('loading').classList.add("animated");
+		id('loading').classList.add("bounceInRight");
 		id('title-mid').style.display = 'none';//retira o elemento principal
 		id('loading').style.display = 'flex';//adiciona o gif que está none
 		meio = "gif";}
 	else if (meio == "imc") {
+		id('loading').classList.add("animated");
+		id('loading').classList.add("bounceInRight");
 		id('testImc').style.display = 'none';//retira o elemento principal
 		id('loading').style.display = 'flex';//adiciona o gif que está none
 		meio = "gif";
