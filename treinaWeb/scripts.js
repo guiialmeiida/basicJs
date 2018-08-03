@@ -51,7 +51,7 @@ if (localStorage.getItem('clique') === "preto" ) {
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#000";}
+			id("testImc").style.color= "#fff";}
 }
 
 
@@ -106,7 +106,7 @@ synthWave = function(){
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#000";}
+			id("testImc").style.color= "#fff";}
 			first_click = "img";
 	document.getElementsByTagName('body')[0].classList.add("backimg");
 	 localStorage.setItem('clique', first_click)
