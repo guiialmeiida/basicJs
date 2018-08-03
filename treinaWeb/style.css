@@ -6,6 +6,7 @@
 		background-image:url('retro.jpg')!important;
 		background-repeat: no-repeat!important;
 		background-size: cover!important;
+		margin: 0;
 	}
 
 	.topnav {
