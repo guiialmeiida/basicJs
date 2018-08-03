@@ -4,6 +4,7 @@
 	}
 	.backimg{
 		background-image:url('retro.jpg')!important;
+		background-repeat: no-repeat!important;
 	}
 
 	.topnav {
