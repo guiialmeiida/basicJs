@@ -63,8 +63,8 @@
 		border-bottom-color: transparent!important;
 		border-top-color: transparent!important;
 		border-radius: 50%;
-		width: 70px;
-		height: 70px;
+		width: 140px;
+		height: 140px;
 		animation: spin 1.5s linear infinite;
 		margin: 0 auto;
 	}
