@@ -39,7 +39,8 @@ if (localStorage.getItem('clique') == "false" ) {
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
-			link.style.color= "#000";}
+			link.style.color= "#000";
+			id("testImc").style.color= "#fff";}
 		//document.getElementById("singlebutton").style.color = "#000000";
 		var first_click = false;
 } else {
@@ -47,7 +48,8 @@ if (localStorage.getItem('clique') == "false" ) {
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			var link = all[i];
-			link.style.color= "#fff";}
+			link.style.color= "#fff";
+			id("testImc").style.color= "#000";}
 		//document.getElementById("singlebutton").style.color = "#fff";
 		first_click = true;
 }
@@ -81,14 +83,16 @@ clickButton = function(){
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
-			link.style.color= "#000";}
-        first_click = false;
+			link.style.color= "#000";
+			id("testImc").style.color= "#fff";}
+       		first_click = false;
     } else {
         document.body.style.background = "#fff";
 		var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
 			var link = all[i];
-			link.style.color= "#fff";}
+			link.style.color= "#fff";
+			id("testImc").style.color= "#000";}
 		first_click = true;
     }
 	localStorage.setItem('clique', first_click)
