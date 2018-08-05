@@ -66,8 +66,6 @@ function trocaCor(){
 		  link.style.backgroundColor= cor; 
 		  link.style.border= cor;
 		}
-		document.getElementById("singlebutton").style.background = cor;
-		document.getElementById("singlebutton").style.border = cor;
 		id("testImc").style.borderColor=cor;
 		id("oie").style.borderColor=cor;
 		
