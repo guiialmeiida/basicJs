@@ -1,10 +1,13 @@
+    .container.custom-container {
+      padding: 0px;
+    }
+	
 	body {
 	  margin: 0;
 	  font-family: Arial, Helvetica, sans-serif;
 	}
 	.backimg{
-		background-image:url('retro.jpg')!important;
-		background-repeat: no-repeat!important;
+		background:url('retro.jpg')no-repeat center center fixed!important;
 		background-size: cover!important;
 		margin: 0;
 		background-position: 50% 50%;
@@ -79,4 +82,5 @@
 	@keyframes spin {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
-	}
+	} 
+	
