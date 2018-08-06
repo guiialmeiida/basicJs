@@ -1,19 +1,22 @@
+//global
 function id(elemento) {
 	return document.getElementById(elemento);
 }
 
+//inicializar class body 
 if (localStorage.getItem('clique') == null || localStorage.getItem('clique') == "img"){
 		document.getElementsByTagName('body')[0].classList.add("backimg");
 }
-//inicializar 
+
+//inicializar cores botoes primeiro acesso
 if (localStorage.getItem('cores') == null) //#565965
 {
 	var aux = '#ff0080';
 }
 else{
 var aux =localStorage.getItem('cores')}
-document.getElementById("title-mid").style.color = aux;
-document.getElementById("corum").value = aux;
+id("title-mid").style.color = aux;
+id("corum").value = aux;
 
 //inicializar botoes pegando o local.storage
 var all = document.getElementsByClassName("btn-secondary");
@@ -57,9 +60,9 @@ if (localStorage.getItem('clique') === "preto" ) {
 
 //button de cores
 function trocaCor(){
-	var	cor = document.getElementById("corum").value;
+	var	cor = id("corum").value;
 	
-		document.getElementById("title-mid").style.color = cor;
+		id("title-mid").style.color = cor;
 		var all = document.getElementsByClassName("btn-secondary");
 		for (var i = 0; i < all.length; i++) {
 		  var link = all[i];
@@ -75,7 +78,7 @@ function trocaCor(){
 }
 first_click = "img";
 
-//button true or false
+//button (preto e branco)true or false
 clickButton = function(){
   if (first_click === "img" || first_click === "branco") {
 		document.getElementsByTagName('body')[0].classList.remove("backimg");
@@ -99,6 +102,7 @@ clickButton = function(){
   localStorage.setItem('clique', first_click)
 }
 
+//button img
 synthWave = function(){
 	var all = document.getElementsByClassName("btn-secondary");
 			for (var i = 0; i < all.length; i++) {
@@ -113,7 +117,7 @@ synthWave = function(){
 id("synth").onclick = synthWave;
 id("bew").onclick = clickButton
 
-//aqui botao musica 
+//button rythm 
 som = true;
 clickButton1 = function(){
 	if (som){
@@ -130,7 +134,7 @@ clickButton1 = function(){
 id("rythm").onclick = clickButton1
 
 
-//loading
+//button loading
 var meio = "title";
 gif = function(){
 	if(meio == "title"){
@@ -148,7 +152,7 @@ gif = function(){
 }
 id("load").onclick = gif
 
-//imc
+//button imc
 imc = function(){
 	if(meio == "title"){
 		id('testImc').classList.add("animated");
@@ -178,6 +182,8 @@ var massa = 65,
 console.log('#############################')
 
 
+
+//learning treinaWeb
 //Desafio Vogal ou Consoante 
 
 console.log('Vogal ou Consoante utilizando switch, if e else // function vorC(letra)')
