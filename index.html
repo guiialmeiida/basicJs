@@ -3,6 +3,7 @@
 	<head>
 	<link rel="stylesheet" href="treinaWeb/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 		<title>JS</title>
 		<link rel="shortcut icon" type="image/x-icon" href="treinaWeb/ico.ico"/>
@@ -15,12 +16,40 @@
 				<button id="rythm" name="singlebutton" class="btn btn-secondary" style="margin:5px">rythm.js</button>
 				<button id="load" name="singlebutton" class="btn btn-secondary" style="margin:5px">loading</button>
 				<button id="imcid" name="singlebutton" class="btn btn-secondary" style="margin:5px">imc</button>
+				<button id="ban" name="singlebutton" class="btn btn-secondary" style="margin:5px">banheiro</button>
 			</div>	
 		</div>
 		
 
 		
-		<div id="meio">
+		<div id="meio">			
+					<h1 id="banhe" class="center display-1 text-center" style="display:none;">Banheiros N1</h1>		
+			<div class="row"> 
+				<div id="banheiro" class="col-md-4 text-center bordinha rounded" style="display: none; background-color: rgba(0, 0, 0, 0.4); margin-top: 3rem; margin-left: 10rem;"> <!---->	
+					<div class="col-md-8" style="margin: auto; margin-top:2.25rem; margin-bottom:2.25rem;">
+						<label for="formGroupExampleInput">SEM JANELA</label>
+						</br>
+						<fieldset disabled>
+						<label for="disabledTextInput">Status</label>
+						<input type="text" class="form-control text-center" id="statusS" value="">
+						</fieldset>						
+						<button id="semjanela" type="submit" class="btn btn-secondary" style="margin-top: .5rem;">Atualizar</button>
+					</div> 
+				</div>
+				<div id="banheiro1" class="col-md-4 text-center bordinha rounded" style="display: none; background-color: rgba(0, 0, 0, 0.4); margin-top: 3rem; margin-left: auto; margin-right: 10rem;"> <!---->	
+					<div class="col-md-8" style="margin: auto; margin-top:2.25rem; margin-bottom:2.25rem;">
+						<label for="formGroupExampleInput">COM JANELA</label>
+						</br>
+						<fieldset disabled>
+						<label for="disabledTextInput">Status</label>
+							<input type="text" class="form-control text-center" id="statusC" value="">
+						</fieldset>				
+						<button id="comjanela" type="submit" class="btn btn-secondary" style="margin-top: .5rem;">Atualizar</button>						
+					</div>
+				</div>
+			</div>
+			
+			
 			<div id="testImc" class="col-md-4 text-center center bordinha rounded" style="display: none; background-color: rgba(0, 0, 0, 0.4);"> <!---->	
 				<div class="col-md-8" style="margin: auto; margin-top:2.25rem; margin-bottom:2.25rem;">
 					<label for="formGroupExampleInput">PESO</label>
