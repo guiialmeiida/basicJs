@@ -16,7 +16,11 @@ if (localStorage.getItem('cores') == null) //#565965
 else{
 var aux =localStorage.getItem('cores')}
 id("title-mid").style.color = aux;
+id("banhe").style.color = aux;
 id("corum").value = aux;
+
+id("statusS").value = localStorage.getItem('ultimoS');
+id("statusC").value = localStorage.getItem('ultimoC');
 
 //inicializar botoes pegando o local.storage
 var all = document.getElementsByClassName("btn-secondary");
@@ -26,6 +30,8 @@ for (var i = 0; i < all.length; i++) {
   link.style.border= aux;
 }
 id("testImc").style.borderColor=aux;
+id("banheiro").style.borderColor=aux;
+id("banheiro1").style.borderColor=aux;
 id("oie").style.borderColor=aux;
 
 //inicializar letra botoes pegando o true ou false do clique
@@ -36,7 +42,9 @@ if (localStorage.getItem('clique') === "preto" ) {
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#000";
-			id("testImc").style.color= "#fff";}
+			id("testImc").style.color= "#fff";
+			id("banheiro").style.color= "#fff";
+			id("banheiro1").style.color= "#fff";}
 		//document.getElementById("singlebutton").style.color = "#000000";
 		//var first_click = false;
 } else if (localStorage.getItem('clique') === "branco" ){
@@ -46,7 +54,9 @@ if (localStorage.getItem('clique') === "preto" ) {
 			for (var i = 0; i < all.length; i++) {
 			var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#000";}
+			id("testImc").style.color= "#000";
+			id("banheiro").style.color= "#000";
+			id("banheiro1").style.color= "#000";}
 		//document.getElementById("singlebutton").style.color = "#fff";
 		//first_click = true;
 }else{
@@ -54,7 +64,9 @@ if (localStorage.getItem('clique') === "preto" ) {
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#fff";}
+			id("testImc").style.color= "#fff";
+			id("banheiro").style.color= "#fff";
+			id("banheiro1").style.color= "#fff";}
 }
 
 
@@ -63,6 +75,7 @@ function trocaCor(){
 	var	cor = id("corum").value;
 	
 		id("title-mid").style.color = cor;
+		id("banhe").style.color = cor;
 		var all = document.getElementsByClassName("btn-secondary");
 		for (var i = 0; i < all.length; i++) {
 		  var link = all[i];
@@ -70,6 +83,8 @@ function trocaCor(){
 		  link.style.border= cor;
 		}
 		id("testImc").style.borderColor=cor;
+		id("banheiro").style.borderColor=cor;
+		id("banheiro1").style.borderColor=cor;
 		id("oie").style.borderColor=cor;
 		
 		console.log(cor);
@@ -87,7 +102,9 @@ clickButton = function(){
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#000";
-			id("testImc").style.color= "#fff";}
+			id("testImc").style.color= "#fff";
+			id("banheiro").style.color= "#fff";
+			id("banheiro1").style.color= "#fff";}
        		first_click = "preto";
     } else{
 		document.getElementsByTagName('body')[0].classList.remove("backimg");
@@ -96,7 +113,9 @@ clickButton = function(){
 			for (var i = 0; i < all.length; i++) {
 			var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#000";}
+			id("testImc").style.color= "#000";
+			id("banheiro").style.color= "#000";
+			id("banheiro1").style.color= "#000";}
 		first_click = "branco";
     }	
   localStorage.setItem('clique', first_click)
@@ -108,7 +127,9 @@ synthWave = function(){
 			for (var i = 0; i < all.length; i++) {
 			  var link = all[i];
 			link.style.color= "#fff";
-			id("testImc").style.color= "#fff";}
+			id("testImc").style.color= "#fff";
+			id("banheiro").style.color= "#fff";
+			id("banheiro1").style.color= "#fff";}
 			first_click = "img";
 	document.getElementsByTagName('body')[0].classList.add("backimg");
 	 localStorage.setItem('clique', first_click)
@@ -146,6 +167,7 @@ gif = function(){
 		id('loading').style.display = 'flex';//adiciona o gif que está none
 		meio = "gif";
 	}
+
 	else {
 		location.reload();
 	}
@@ -173,8 +195,77 @@ imc = function(){
 }
 id("imcid").onclick = imc
 
-//Desafio Cálculo IMC 
 
+
+
+//button banheiro
+banheiro = function(){
+	if(meio == "title"){
+		id('banheiro').classList.add("animated");
+		id('banheiro').classList.add("bounceInLeft");
+		id('banheiro1').classList.add("animated");
+		id('banheiro1').classList.add("bounceInLeft");
+		id('banhe').classList.add("animated");
+		id('banhe').classList.add("bounceInLeft");
+		id('title-mid').style.display = 'none';//retira o elemento principal
+		id('banheiro').style.display = 'flex';//adiciona a div que está none
+        id('banheiro1').style.display = 'flex';//adiciona a div que está none
+		id('banhe').style.display = 'block';//adiciona a div que está none
+	meio = "banheiro";}
+	else{
+		location.reload();
+	}
+}
+id("ban").onclick = banheiro
+
+var statusS = localStorage.getItem('cliqueS');
+var statusC = localStorage.getItem('cliqueC');
+
+horaS = function() {
+    time1 = moment().format('hh:mm:ss A');
+    if (statusS === "desocupado") {
+		ultimoS = time1 + " ocupado";
+        document.getElementById("statusS").value = ultimoS;
+        statusS = "ocupado";
+        console.log(statusS)
+    } else {
+		ultimoS = time1 + " desocupado";
+        document.getElementById("statusS").value = ultimoS;
+        statusS = "desocupado";
+        console.log(statusS)
+    }
+	localStorage.setItem('ultimoS', ultimoS)
+    localStorage.setItem('cliqueS', statusS)
+}
+
+
+document.getElementById("semjanela").onclick = horaS
+
+
+horaC = function() {
+    time1 = moment().format('hh:mm:ss A');
+    if (statusC === "desocupado") {
+		ultimoC = time1 + " ocupado";
+        document.getElementById("statusC").value = ultimoC;
+        statusC = "ocupado";
+        console.log(statusC)
+    } else {
+		ultimoC = time1 + " desocupado";
+        document.getElementById("statusC").value = ultimoC;
+        statusC = "desocupado";
+        console.log(statusC)
+    }
+	localStorage.setItem('ultimoC', ultimoC)
+    localStorage.setItem('cliqueC', statusC)
+}
+
+
+document.getElementById("comjanela").onclick = horaC
+
+
+
+
+//Desafio Cálculo IMC 
 console.log('Calculo IMC - Variaveis: massa e altura')
 var massa = 65,
 	altura = 1.7,
