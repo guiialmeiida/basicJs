@@ -281,7 +281,7 @@ function message(){
 	var signoPessoa = (sel1.selectedOptions[0].text);
    	var recebe = "";
 	ranNums = [];
-	for(i=0;i<3;i++){
+	for(i=0;i<2;i++){
 	var number = Math.trunc((Math.random()*9)+1) 
 	ranNums += number
 	if (number == ranNums[i-1]){
@@ -292,11 +292,11 @@ function message(){
 			case 1: recebe+= " " + signoPessoa + (" uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
 			case 2: recebe+= " " + signoPessoa + (" o momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
 			case 3: recebe+= " " + signoPessoa + (" sua casa passa a ser ponto de encontros entre amigos e parentes queridos.");break;
-			case 4: recebe+= " " + signoPessoa + (" você vai priorizar os amigos íntimos no mês de novembro e dezembro.");break;
+			case 4: recebe+= " " + signoPessoa + (" Dia bastante positivo para expressar sentimentos e opiniões com clareza. Explore seus talentos, estude outra língua e prepare o coração para novas emoções.");break;
 			case 5: recebe+= " " + signoPessoa + (" se puder, tire uns dias para cuidar de si mesmo, deixe os contatos comerciais para daqui alguns dias.");break;
-			case 6: recebe+= " " + signoPessoa + (" não será um ano leve ou fácil, pois Saturno exigirá muito de você.");break;
+			case 6: recebe+= " " + signoPessoa + (" Inclua mais emoção em sua vida e curta momentos deliciosos no amor. Não faltará inspiração para escrever, estudar e pesquisar informações relevantes. ");break;
 			case 7: recebe+= " " + signoPessoa + (" esse mês indica para você um período de maior assertividade e determinação a alcançar suas metas de trabalho.");break;
-			case 8: recebe+= " " + signoPessoa + (" em agosto, setembro ou novembro uma viagem rápida pode ter o mesmo efeito sobre você.");break;
+			case 8: recebe+= " " + signoPessoa + (" encerrará a semana com ótimos resultados de trabalho e mais poder.");break;
 			case 9: recebe+= " " + signoPessoa + (" seja racional, procure não agir ou reagir impulsivamente e saiba direcionar essa intensa energia para suas conquistas, e não para a destrutividade.");break;
 		}
 	}
