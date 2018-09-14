@@ -35,6 +35,7 @@ id("banheiro").style.borderColor=aux;
 id("banheiro1").style.borderColor=aux;
 id("oie").style.borderColor=aux;
 
+
 //inicializar letra botoes pegando o true ou false do clique
 if (localStorage.getItem('clique') === "preto" ) {
 		document.getElementsByTagName('body')[0].classList.remove("backimg");
