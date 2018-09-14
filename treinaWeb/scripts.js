@@ -265,6 +265,45 @@ document.getElementById("comjanela").onclick = horaC
 
 
 
+function message(){
+	var recebe = "";
+	for (i=0;i<3;i++){
+		var number = Math.trunc((Math.random()*9)+1) 
+		switch(number){
+			case 1: recebe+=(" Uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
+			case 2: recebe+=(" O momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
+			case 3: recebe+=(" Sua casa passa a ser ponto de encontros entre amigos e parentes queridos.");break;
+			case 4: recebe+=(" Você vai priorizar os amigos íntimos no mês de novembro e dezembro.");break;
+			case 5: recebe+=(" Se puder, tire uns dias para cuidar de si mesmo, deixe os contatos comerciais para daqui alguns dias.");break;
+			case 6: recebe+=(" Não será um ano leve ou fácil, pois Saturno exigirá muito de você.");break;
+			case 7: recebe+=(" Esse mês indica para você um período de maior assertividade e determinação a alcançar suas metas de trabalho.");break;
+			case 8: recebe+=(" Em agosto, setembro ou novembro uma viagem rápida pode ter o mesmo efeito sobre você.");break;
+			case 9: recebe+=(" Seja racional, procure não agir ou reagir impulsivamente e saiba direcionar essa intensa energia para suas conquistas, e não para a destrutividade.");break;
+		}
+	}
+	console.log(recebe)
+	document.getElementById('textAreaH').innerHTML = "";
+	document.getElementById('textAreaH').innerHTML = recebe;
+}
+
+
+
+
+//button banheiro
+horoscopo = function(){
+	if(meio == "title"){
+		id('testHoroscopo').classList.add("animated");
+		id('testHoroscopo').classList.add("bounceInLeft");
+		id('title-mid').style.display = 'none';//retira o elemento principal
+		id('testHoroscopo').style.display = 'flex';//adiciona a div que está none
+	meio = "horoscopo";}
+	else{
+		location.reload();
+	}
+}
+id("horoscopo").onclick = horoscopo
+
+
 //Desafio Cálculo IMC 
 console.log('Calculo IMC - Variaveis: massa e altura')
 var massa = 65,
