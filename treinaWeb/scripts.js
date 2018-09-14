@@ -30,6 +30,7 @@ for (var i = 0; i < all.length; i++) {
   link.style.border= aux;
 }
 id("testImc").style.borderColor=aux;
+id("testHoroscopo").style.borderColor=aux;
 id("banheiro").style.borderColor=aux;
 id("banheiro1").style.borderColor=aux;
 id("oie").style.borderColor=aux;
@@ -43,6 +44,7 @@ if (localStorage.getItem('clique') === "preto" ) {
 			  var link = all[i];
 			link.style.color= "#000";
 			id("testImc").style.color= "#fff";
+			id("testHoroscopo").style.color= "#fff";
 			id("banheiro").style.color= "#fff";
 			id("banheiro1").style.color= "#fff";}
 		//document.getElementById("singlebutton").style.color = "#000000";
@@ -55,6 +57,7 @@ if (localStorage.getItem('clique') === "preto" ) {
 			var link = all[i];
 			link.style.color= "#fff";
 			id("testImc").style.color= "#000";
+			id("testHoroscopo").style.color= "#000";
 			id("banheiro").style.color= "#000";
 			id("banheiro1").style.color= "#000";}
 		//document.getElementById("singlebutton").style.color = "#fff";
@@ -65,6 +68,7 @@ if (localStorage.getItem('clique') === "preto" ) {
 			  var link = all[i];
 			link.style.color= "#fff";
 			id("testImc").style.color= "#fff";
+			id("testHoroscopo").style.color= "#fff";
 			id("banheiro").style.color= "#fff";
 			id("banheiro1").style.color= "#fff";}
 }
@@ -83,6 +87,7 @@ function trocaCor(){
 		  link.style.border= cor;
 		}
 		id("testImc").style.borderColor=cor;
+		id("testHoroscopo").style.borderColor=cor;
 		id("banheiro").style.borderColor=cor;
 		id("banheiro1").style.borderColor=cor;
 		id("oie").style.borderColor=cor;
@@ -103,6 +108,7 @@ clickButton = function(){
 			  var link = all[i];
 			link.style.color= "#000";
 			id("testImc").style.color= "#fff";
+			id("testHoroscopo").style.color= "#fff";
 			id("banheiro").style.color= "#fff";
 			id("banheiro1").style.color= "#fff";}
        		first_click = "preto";
@@ -114,6 +120,7 @@ clickButton = function(){
 			var link = all[i];
 			link.style.color= "#fff";
 			id("testImc").style.color= "#000";
+			id("testHoroscopo").style.color= "#000";
 			id("banheiro").style.color= "#000";
 			id("banheiro1").style.color= "#000";}
 		first_click = "branco";
@@ -128,6 +135,7 @@ synthWave = function(){
 			  var link = all[i];
 			link.style.color= "#fff";
 			id("testImc").style.color= "#fff";
+			id("testHoroscopo").style.color= "#fff";
 			id("banheiro").style.color= "#fff";
 			id("banheiro1").style.color= "#fff";}
 			first_click = "img";
@@ -265,20 +273,25 @@ document.getElementById("comjanela").onclick = horaC
 
 
 
+
+
+
 function message(){
-	var recebe = "";
-	for (i=0;i<3;i++){
-		var number = Math.trunc((Math.random()*9)+1) 
+
+	var signoPessoa = (sel1.selectedOptions[0].text);
+    var recebe = "";
+	for(i=0;i<3;i++){
+	var number = Math.trunc((Math.random()*9)+1) 		
 		switch(number){
-			case 1: recebe+=(" Uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
-			case 2: recebe+=(" O momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
-			case 3: recebe+=(" Sua casa passa a ser ponto de encontros entre amigos e parentes queridos.");break;
-			case 4: recebe+=(" Você vai priorizar os amigos íntimos no mês de novembro e dezembro.");break;
-			case 5: recebe+=(" Se puder, tire uns dias para cuidar de si mesmo, deixe os contatos comerciais para daqui alguns dias.");break;
-			case 6: recebe+=(" Não será um ano leve ou fácil, pois Saturno exigirá muito de você.");break;
-			case 7: recebe+=(" Esse mês indica para você um período de maior assertividade e determinação a alcançar suas metas de trabalho.");break;
-			case 8: recebe+=(" Em agosto, setembro ou novembro uma viagem rápida pode ter o mesmo efeito sobre você.");break;
-			case 9: recebe+=(" Seja racional, procure não agir ou reagir impulsivamente e saiba direcionar essa intensa energia para suas conquistas, e não para a destrutividade.");break;
+			case 1: recebe+= " " + signoPessoa + (" uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
+			case 2: recebe+= " " + signoPessoa + (" o momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
+			case 3: recebe+= " " + signoPessoa + (" sua casa passa a ser ponto de encontros entre amigos e parentes queridos.");break;
+			case 4: recebe+= " " + signoPessoa + (" você vai priorizar os amigos íntimos no mês de novembro e dezembro.");break;
+			case 5: recebe+= " " + signoPessoa + (" se puder, tire uns dias para cuidar de si mesmo, deixe os contatos comerciais para daqui alguns dias.");break;
+			case 6: recebe+= " " + signoPessoa + (" não será um ano leve ou fácil, pois Saturno exigirá muito de você.");break;
+			case 7: recebe+= " " + signoPessoa + (" esse mês indica para você um período de maior assertividade e determinação a alcançar suas metas de trabalho.");break;
+			case 8: recebe+= " " + signoPessoa + (" em agosto, setembro ou novembro uma viagem rápida pode ter o mesmo efeito sobre você.");break;
+			case 9: recebe+= " " + signoPessoa + (" seja racional, procure não agir ou reagir impulsivamente e saiba direcionar essa intensa energia para suas conquistas, e não para a destrutividade.");break;
 		}
 	}
 	console.log(recebe)
@@ -303,6 +316,8 @@ horoscopo = function(){
 }
 id("horoscopo").onclick = horoscopo
 
+
+//######################################################################################################################################################################################################################################################################################################################################################################################################
 
 //Desafio Cálculo IMC 
 console.log('Calculo IMC - Variaveis: massa e altura')
