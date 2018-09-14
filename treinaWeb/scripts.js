@@ -279,9 +279,15 @@ document.getElementById("comjanela").onclick = horaC
 function message(){
 
 	var signoPessoa = (sel1.selectedOptions[0].text);
-    var recebe = "";
+   	var recebe = "";
+	ranNums = [];
 	for(i=0;i<3;i++){
-	var number = Math.trunc((Math.random()*9)+1) 		
+	var number = Math.trunc((Math.random()*9)+1) 
+	ranNums += number
+	if (number == ranNums[i-1]){
+		number++;
+		ranNums += number
+	}
 		switch(number){
 			case 1: recebe+= " " + signoPessoa + (" uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
 			case 2: recebe+= " " + signoPessoa + (" o momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
