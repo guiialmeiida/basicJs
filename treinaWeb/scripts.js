@@ -291,12 +291,12 @@ function message(){
 		switch(number){
 			case 1: recebe+= " " + signoPessoa + (" uma boa notícia, relacionada ao aumento de seus rendimentos, pode chegar a qualquer momento.");break;
 			case 2: recebe+= " " + signoPessoa + (" o momento pode envolver um novo projeto ou contrato, emprego ou promoção que envolvam o aumento de seus rendimentos.");break;
-			case 3: recebe+= " " + signoPessoa + (" sua casa passa a ser ponto de encontros entre amigos e parentes queridos.");break;
-			case 4: recebe+= " " + signoPessoa + (" Dia bastante positivo para expressar sentimentos e opiniões com clareza. Explore seus talentos, estude outra língua e prepare o coração para novas emoções.");break;
+			case 3: recebe+= " " + signoPessoa + (" um grupo social diferente exercerá influências positivas em sua vida. Boas notícias de longe! Aceite convite para viajar com amigos e reciclar a consciência.");break;
+			case 4: recebe+= " " + signoPessoa + (" dia bastante positivo para expressar sentimentos e opiniões com clareza. Explore seus talentos, estude outra língua e prepare o coração para novas emoções.");break;
 			case 5: recebe+= " " + signoPessoa + (" se puder, tire uns dias para cuidar de si mesmo, deixe os contatos comerciais para daqui alguns dias.");break;
-			case 6: recebe+= " " + signoPessoa + (" Inclua mais emoção em sua vida e curta momentos deliciosos no amor. Não faltará inspiração para escrever, estudar e pesquisar informações relevantes. ");break;
+			case 6: recebe+= " " + signoPessoa + (" inclua mais emoção em sua vida e curta momentos deliciosos no amor. Não faltará inspiração para escrever, estudar e pesquisar informações relevantes. ");break;
 			case 7: recebe+= " " + signoPessoa + (" esse mês indica para você um período de maior assertividade e determinação a alcançar suas metas de trabalho.");break;
-			case 8: recebe+= " " + signoPessoa + (" encerrará a semana com ótimos resultados de trabalho e mais poder.");break;
+			case 8: recebe+= " " + signoPessoa + (" os relacionamentos serão fundamentais para o seu sucesso. Caminhos para o futuro ficarão mais claros, neste fim de semana.");break;
 			case 9: recebe+= " " + signoPessoa + (" seja racional, procure não agir ou reagir impulsivamente e saiba direcionar essa intensa energia para suas conquistas, e não para a destrutividade.");break;
 		}
 	}
